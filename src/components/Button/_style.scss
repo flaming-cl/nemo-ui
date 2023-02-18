@@ -33,10 +33,11 @@
 }
 
 .btn-primary {
-  @include button-style($primary, $primary, $white, $primary-text)
+  @include button-style($primary, $primary, $primary-text, white)
 }
+
 .btn-danger {
-  @include button-style($danger, $danger, $white)
+  @include button-style($danger, $danger, $white, $danger-text, $danger-hover)
 }
 
 .btn-default {
@@ -45,9 +46,12 @@
 
 .btn-link {
   font-weight: $font-weight-normal;
-  color: $btn-link-color;
+  color: $primary-text;
   text-decoration: $link-decoration;
   box-shadow: none;
+  outline: none;
+  border: none;
+  background: none;
   &:hover {
     color: $btn-link-hover-color;
     text-decoration: $link-hover-decoration;
@@ -56,6 +60,9 @@
   &.focus {
     text-decoration: $link-hover-decoration;
     box-shadow: none;
+    outline: none;
+    border: none;
+    background: none;
   }
   &:disabled,
   &.disabled {
@@ -64,12 +71,40 @@
   }
 }
 
-.neumo-primary-cc {
-  background: $primary;
-  box-shadow: $box-shadow-neumo;
+.btn-default-cc {
+  //background: linear-gradient(145deg, #b5c8da, #d7eeff);//cc
+  background: #DFECF4;//cc
+  //background: linear-gradient(145deg, #d7eeff, #b5c8da); //cv
+  border: 1px solid #e6f1f9;
+  box-shadow: $box-shadow-n-de;
 }
 
-.neumo-primary-cv {
-  box-shadow: $box-shadow-neumo;
+.btn-default-cv {
+  //background: linear-gradient(145deg, #b5c8da, #d7eeff);//cc
+  //background: #DFECF4;//cc
+  background: linear-gradient(145deg, #effdff, #c9d4dc); //cv
+  border: 1px solid #e6f1f9;
+  box-shadow: $box-shadow-n-de;
+}
+
+.btn-primary-cc {
+  background: $primary-cc;
+  border: 1px solid #cde7ff;
+  box-shadow: $box-shadow-n;
+}
+
+.btn-primary-cv {
   background: $primary-cv;
+  border: 1px solid #cde7ff;
+  box-shadow: $box-shadow-n;
+}
+
+.btn-danger-cc {
+  background: $danger-cc;
+  box-shadow: $box-shadow-n;
+}
+
+.btn-danger-cv {
+  background: $danger-cv;
+  box-shadow: $box-shadow-n;
 }

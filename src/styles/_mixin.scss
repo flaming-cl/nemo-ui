@@ -8,8 +8,8 @@
   $background,
   $border,
   $color,
-  $hover-color: darken($color, 80%),
-  $hover-background: lighten($background, 7.5%),
+  $hover-color: darken($color, 40%),
+  $hover-background: darken($background, 5%),
   $hover-border: lighten($border, 10%),
 ) {
   color: $color;
@@ -25,6 +25,7 @@
     color: $hover-color;
     background: $hover-background;
     border-color: $hover-border;
+    outline: none;
   }
   &:disabled,
   &.disabled {

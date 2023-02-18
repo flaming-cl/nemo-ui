@@ -1,0 +1,110 @@
+$alert-colors:
+        (
+                "default":    $primary,
+                "success":    $success,
+                "warning":    $warning,
+                "danger":     $danger,
+        );
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+  width: 300px;
+  .alert-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $alert-padding-y $alert-padding-x;
+    color: inherit;
+    cursor: pointer;
+  }
+  .bold-title {
+    font-weight: $font-weight-bold;
+  }
+  .alert-desc {
+    font-size: $alert-description-font-size;
+    margin: $alert-description-top-margin 0 0;
+  }
+  margin: 32px; // remove
+}
+@each $color, $value in $alert-colors {
+  .alert-#{$color} {
+    @include alert-style($value, darken($value, 5%), $white);
+  }
+}
+
+.alt-default-cc {
+  //background: linear-gradient(145deg, #b5c8da, #d7eeff);//cc
+  background: #DFECF4;//cc
+  //background: linear-gradient(145deg, #d7eeff, #b5c8da); //cv
+  border: 1px solid #e6f1f9;
+  box-shadow: $box-shadow-n-de;
+  color: $primary-text;
+}
+
+.alt-default-cv {
+  //background: linear-gradient(145deg, #b5c8da, #d7eeff);//cc
+  background: #DFECF4;//cc
+  //background: linear-gradient(145deg, #d7eeff, #b5c8da); //cv
+  border: 1px solid #e6f1f9;
+  box-shadow: $box-shadow-n-de;
+  color: $primary-text;
+}
+
+.alt-primary-cv {
+  //background: linear-gradient(145deg, #b5c8da, #d7eeff);//cc
+  //background: #DFECF4;//cc
+  background: linear-gradient(145deg, #effdff, #c9d4dc); //cv
+  border: 1px solid #e6f1f9;
+  box-shadow: $box-shadow-n-de;
+  color: $primary-text;
+}
+
+.alt-primary-cc {
+  background: $primary-cc;
+  border: 1px solid #cde7ff;
+  box-shadow: $box-shadow-n;
+  color: $primary-text;
+}
+
+.alt-primary-cv {
+  background: $primary-cv;
+  border: 1px solid #cde7ff;
+  box-shadow: $box-shadow-n;
+}
+
+.alt-danger-cc {
+  background: $danger-cc;
+  box-shadow: $box-shadow-n;
+}
+
+.alt-danger-cv {
+  background: $danger-cv;
+  box-shadow: $box-shadow-n;
+}
+
+.alt-warning-cc {
+  background: $warning-cc;
+  box-shadow: $box-shadow-n;
+}
+
+.alt-warning-cv {
+  background: $warning-cv;
+  box-shadow: $box-shadow-n;
+  border-color: #ede6ba;
+}
+
+.alt-success-cc {
+  background: $success-cc;
+  box-shadow: $box-shadow-n;
+  border: 1px solid #d0e4c7;
+}
+
+.alt-success-cv {
+  background: $success-cv;
+  box-shadow: $box-shadow-n;
+  border: 1px solid #d0e4c7;
+}
+
